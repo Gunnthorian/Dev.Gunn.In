@@ -74,7 +74,7 @@ div.social-icons {
 .fa-linkedin:hover {
     background-color: #0073a4;
 }
-.fa-snapchat {
+.fa-github {
     padding:10px 12px;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -83,6 +83,9 @@ div.social-icons {
     transition: .5s;
     background-color: #566473;
 }
-.fa-snapchat:hover {
-    background-color: #ffd700;
+.fa-github:hover {
+    background-color: #24292e;
+}
+.fa-link {
+  
 }

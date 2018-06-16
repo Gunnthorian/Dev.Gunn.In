@@ -20,9 +20,7 @@
   <link rel="stylesheet" href="./css/skeleton.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/social-icons.css">
-  <!-- JS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="./js/scripts.js"></script>
+  <link href="/static/fontawesome/fontawesome-all.css" rel="stylesheet">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="./images/GB_gold_fav.png">
@@ -33,41 +31,41 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="navigation-id" class="nav-cont">
     <div class="nav-bar">
-      <a href="http://dev.gunn.in"><img alignment="middle" src="./images/GB_gold.png" draggable="false"/></a>
+      <a href="http://gunn.in"><img alignment="middle" src="./images/GB_gold.png" draggable="false"/></a>
       <div class="nav-link-cont">
-        <a href="http://dev.gunn.in/support"><div url="/support" class="nav-link nav-starred">Support Me</div></a>
-        <a href="#intro"><div url="#projects" class="nav-link">Projects</div></a>
-        <a href="#aboutme"><div url="#about" class="nav-link">About</div></a>
+        <a href="http://gunn.in/support"><div url="/support" class="nav-link nav-starred">Support Me</div></a>
+        <!-- <a href="#intro"><div url="#projects" class="nav-link">Projects</div></a> -->
+        <a href="#about"><div url="#about" class="nav-link">About</div></a>
       </div>
     </div>
   </div>
+  <div class="hero-cont">
+    <div class="hero-box">
+      <img id="hero-gif" src="" draggable="false"/>
+      <script>document.getElementById('hero-gif').src="images/GB_Trident_gold_animate_1_5.gif?a="+Math.random()</script>
+    </div>
+  </div>
   <div class="showcase-cont">
-    <div class="showcase-box">
-      <img id="showcase-gif" src="" draggable="false"/>
-      <script>document.getElementById('showcase-gif').src="images/GB_Trident_gold_animate_1_5.gif?a="+Math.random()</script>
+    <div id="showcase-cont">
+      <div id="showcase-slider" class="showcase-slider">
+        <div class="showcase-item" style="cursor:pointer;background-image:url('images/led_picker.png')" onclick="window.open('https://github.com/Gunnthorian/LED-Picker')">
+          <div>LED Picker</div>
+          <div>An app that controls LED lights via an Arduino</div>
+        </div>
+        <div class="showcase-item" style="background-image:url('images/GRBL_CNC.png')">
+          <div>GRBL CNC</div>
+          <div>I'm currently building a 3-axis CNC from scratch that will be running on GRBL</div>
+        </div>
+        <div class="showcase-item" style="cursor:pointer;background-image:url('images/bigbones-artwork.png')" onclick="window.open('http://bigbones.gunn.in')">
+          <div>BigBones</div>
+          <div>I've been working on a static page boilderplate. This page is created using it!</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container-background">
     <div class="container">
-      <div class="row">
-        <div class="one-half column">
-          <h4>Basic Pagea</h4>
-          <p>This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the <a href="http://www.getskeleton.com">Skeleton
-            documentation</a>.</p>
-        </div>
-        <div img-src="./images/flat_macbook.png" img-src-hori="./images/flat_iphonex.png" onload-rise="" class="one-half column fit-center-img">
-        </div>
-        <div spacer="line"></div>
-      </div>
-      <anchor id="aboutme"></anchor>
+      <anchor id="about"></anchor>
       <div class="row">
         <div class="twelve column">
           <h1>About me</h1>
@@ -75,6 +73,7 @@
             there's one direct correlation that I have found. The more I take
             something apart the closer I get to putting it back together.</p>
         </div>
+        <div spacer="line"></div>
       </div>
       <div class="row">
         <div class="one-third column" style="text-align:right" mobile="7">
@@ -100,7 +99,7 @@
         </div>
       </div>
     </div>
-  <div class="container-background">
+  <!-- <div class="container-background">
     <div class="container cont-alt">
       <div class="row">
         <div class="one-third column">
@@ -118,18 +117,21 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="footer-cont">
     <div class="footer-bar">
       <div class="social-icons">
-        <li><a href="" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-snapchat"></i></a></li>
+        <li><a href="https://www.facebook.com/gunnthorian" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/gunnthorian" class="social-icon"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/user/gunnthorian" class="social-icon"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://github.com/gunnthorian" class="social-icon"><i class="fa fa-github"></i></a></li>
       </div>
     </div>
   </div>
 
+<!-- JS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="text/javascript" src="./js/scripts.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

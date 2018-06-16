@@ -8,12 +8,15 @@ mobile_condense = 700;
 
 function documentOnResize(){
   divImgEqualToParent()
+  showcaseSizing()
 }
 
 function documentOnLoad(){
   divImgEqualToParent()
   setupAnimateElLoads()
   setupAnchors()
+  calcWidthOfShowcase()
+  showcaseSizing()
 }
 
 window.onscroll = function(){
@@ -98,23 +101,69 @@ function setupAnchors(){
     child_a.innerHTML = "#"+anchor_id;
     child.appendChild(child_a);
     anchors[i].appendChild(child);
+    anchors[i].onclick = function(e) {
+      let anchor = window.location.origin+window.location.pathname+this.textContent;
+
+      var p = document.getElementsByTagName('body');
+      var newElement = document.createElement('textarea');
+      newElement.setAttribute('id', 'copytextarea');
+      newElement.innerHTML = anchor;
+      p[0].appendChild(newElement);
+
+      newElement.select();
+      try {
+        link = document.execCommand('copy');
+      } catch (err) {
+      }
+      var element = document.getElementById('copytextarea');
+      element.parentNode.removeChild(element);
+    };
   }
 }
 
-function copyAnchor(){
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
+function calcWidthOfShowcase(){
+  document.getElementById('showcase-cont').style.width = document.querySelectorAll('.showcase-item').length * 400 + "px";
+}
 
-  /* Select the text field */
-  copyText.select();
+document.getElementById('showcase-slider').addEventListener("mousemove", showcaseHover);
 
-  let anchor = window.location.href +
+var showcasePos = 0;
 
-  /* Copy the text inside the text field */
-  document.execCommand("Copy");
+function showcaseHover(){
+  var raw_curs_pos = event.clientX;
+  var curs_pos = raw_curs_pos - window.innerWidth/2;
+  var rect = document.getElementById('showcase-slider').getBoundingClientRect();
+  var rightx = rect.x + rect.width;
 
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  if(raw_curs_pos > window.innerWidth - window.innerWidth/5){
+    var slider_input = Math.round(raw_curs_pos - (window.innerWidth - window.innerWidth/5));
+    document.getElementById('showcase-slider').style.left = -rect.width + window.innerWidth+(raw_curs_pos/100000) + "px";
+    document.getElementById('showcase-slider').style.transition = (rect.x+rect.width-window.innerWidth)/(10*slider_input) + "s linear";
+  }else if(raw_curs_pos < window.innerWidth/5){
+    var slider_input = -1*Math.round(raw_curs_pos - window.innerWidth/5);
+    document.getElementById('showcase-slider').style.left = 0-(raw_curs_pos/100000) + "px";
+    document.getElementById('showcase-slider').style.transition = (-rect.x)/(10*slider_input) + "s linear";
+    console.log((-rect.x)/(100*slider_input) + "s linear");
+  }else{
+    document.getElementById('showcase-slider').style.left = rect.x + "px";
+    document.getElementById('showcase-slider').style.transition = "0s linear";
+  }
+}
+
+function showcaseSizing(){
+  var rect = document.getElementById('showcase-slider').getBoundingClientRect();
+  console.log('run');
+  if(document.querySelectorAll('.showcase-item').length * 400 < window.innerWidth){
+    var elem_width = window.innerWidth/document.querySelectorAll('.showcase-item').length;
+    for(i = 0; i < document.querySelectorAll('.showcase-item').length; i += 1){
+      document.querySelectorAll('.showcase-item')[i].style.width = elem_width + "px";
+    }
+    document.getElementById('showcase-cont').style.width = document.querySelectorAll('.showcase-item').length * elem_width + "px";
+    console.log(elem_width);
+  }
+  if(rect.x+rect.width < window.innerWidth){
+    document.getElementById('showcase-slider').style.left = 0;
+  }
 }
 
 function navAnimation(){

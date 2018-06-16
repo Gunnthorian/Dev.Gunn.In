@@ -153,16 +153,16 @@ a{
   background-color: #C22D2D;
 }
 
-.showcase-cont{
+.hero-cont{
   position: relative;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: #51788B;
+  background-color: #386f8a;
   overflow-y: hidden;
 }
-.showcase-box{
+.hero-box{
   position: relative;
   width: 100%;
   height: 100%;
@@ -170,7 +170,7 @@ a{
   box-sizing: border-box;
 }
 
-.showcase-box > img:first-child{
+.hero-box > img:first-child{
   position: absolute;
   left: 0px;
   height: 100vw;
@@ -178,23 +178,23 @@ a{
   top: calc(-1 * ( 50vw - 50vh ));
   margin: 0 auto;
   display: block;
-  /* animation: .3s cubic-bezier(.01,0,.1,1) 0s 1 scaleDownShowcaseLogo; */
+  /* animation: .3s cubic-bezier(.01,0,.1,1) 0s 1 scaleDownheroLogo; */
 }
 /*THESE TWO ARE TIED TOGETHER ^ v */
 @media (min-width: 401px) {
-  .showcase-box > img:first-child{
+  .hero-box > img:first-child{
     left: calc(50vw - 200px);
     top: calc(50vh - 200px);
   }
 }
 
 @media (min-width: 700px) {
-  .showcase-box{
+  .hero-box{
     width: 80%; }
 }
 
-/* animate the showcase logo */
-@keyframes scaleDownShowcaseLogo {
+/* animate the hero logo */
+@keyframes scaleDownheroLogo {
   0% {
     transform: scale(2);
   }
@@ -202,6 +202,56 @@ a{
     transform: scale(1);
   }
 }
+
+.showcase-cont{
+  height: 400px;
+  width: 100%;
+  display: block;
+  background-color: red;
+  display: block;
+  overflow: hidden;
+}
+
+#showcase-cont{
+  display: block;
+  height: 400px;
+}
+
+.showcase-slider{
+  height: inherit;
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: blue;
+  transition: left 1s;
+}
+
+.showcase-item{
+display: inline-block;
+  height: inherit;
+  width: 400px;
+  background-color: white;
+  display: block;
+  float: left;
+  background-position: center;
+  background-size: cover;
+}
+
+.showcase-item>div:last-child{
+  margin-top: 10px;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 15px;
+}
+
+.showcase-item>div:first-child{
+  margin-top: 35px;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 25px;
+}
+
+/* body below */
 
 .container-background{
   width: 100vw;
@@ -293,11 +343,19 @@ div[spacer] {
 }
 
 anchor {
+  cursor: pointer;
   position: relative;
   display: block;
   height: 0px;
   width: 100px;
   top: -100px;
+}
+#copytextarea{
+  max-height:0px;
+  position: absolute;
+  top:0;
+  z-index: -10000;
+  overflow: hidden;
 }
 
 /* anchor::before {
@@ -328,11 +386,11 @@ anchor > div {
   display: block;
   position: relative;
   top: 102px;
-  right: 150px;
+  right: 230px;
   padding-top: 13px;
   height: 37px;
-  width: auto;
   overflow: hidden;
+  width: 200px;
 }
 
 anchor > div > div {
@@ -353,7 +411,7 @@ anchor > div > div:hover {
   right: 0px;
   padding-top: 13px;
   height: 37px;
-  width: 100px;
+  width: auto;
 }
 anchor > div > div::before {
   content: "";
@@ -375,4 +433,17 @@ anchor > div > div:hover::before {
   display: block;
   position: absolute;
   top: -50px;
+}
+anchor > div > div:hover i {
+  position: absolute;
+  left: -90px;
+  top: 12px;
+  padding-right: 2px;
+  width: 60px;
+  background-color: #24292e;
+  color: white;
+  display: block;
+}
+anchor > div > div > i {
+  display: none;
 }

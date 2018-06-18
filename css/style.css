@@ -209,9 +209,11 @@ a{
   display: block;
   background-color: red;
   display: block;
-  overflow: hidden;
+  overflow: scroll;
 }
-
+.showcase-cont::-webkit-scrollbar {
+    display: none;  // Safari and Chrome
+}
 #showcase-cont{
   display: block;
   height: 400px;

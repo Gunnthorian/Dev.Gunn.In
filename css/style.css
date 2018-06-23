@@ -210,10 +210,13 @@ a{
   background-color: red;
   display: block;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
+
 .showcase-cont::-webkit-scrollbar {
     display: none;  // Safari and Chrome
 }
+
 #showcase-cont{
   display: block;
   height: 400px;

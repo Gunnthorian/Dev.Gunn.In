@@ -1,6 +1,9 @@
 //  Config for BareBones's javascript sizings
 
 img_src_fallback_height = 300;
+
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
 // Height of images on the grid system that dont have a sibling element to
 // reference their height off of.
 mobile_condense = 700;
@@ -125,7 +128,9 @@ function calcWidthOfShowcase(){
   document.getElementById('showcase-cont').style.width = document.querySelectorAll('.showcase-item').length * 400 + "px";
 }
 
-document.getElementById('showcase-slider').addEventListener("mousemove", showcaseHover);
+if(iOS){
+  document.getElementById('showcase-slider').addEventListener("mousemove", showcaseHover);
+}
 
 var showcasePos = 0;
 var scroll_loop = 0;

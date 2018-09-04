@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Rockfell';
+  src:  url('../fonts/Rockwell-Regular.woff2') format('woff2'),
+        url('../fonts/Rockwell-Regular.woff') format('woff');
+}
+
 a{
   color: #008CFF;
 }
@@ -50,6 +56,36 @@ a{
 .nav-bar > a > img:active{
   transition: transform 0.1s;
   transform: scale(0.9);
+}
+
+.name-plate {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: calc(50% - 250px);
+  color: black;
+  font-family: 'Rockfell', sans-serif;
+  font-size: 40px;
+  width: 500px;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0px auto;
+  margin-top: 15px;
+  transition: top .1s ease;
+}
+
+@media (min-width: 1200px) {
+  .name-plate {
+    display: block;
+  }
+}
+
+.nav-scrolled > .nav-bar > .name-plate{
+  position: absolute;
+  top: -10px;
+  transition: top .1s ease;
 }
 
 /* animate the nav logo */
@@ -207,7 +243,6 @@ a{
   height: 400px;
   width: 100%;
   display: block;
-  background-color: red;
   display: block;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
@@ -227,12 +262,13 @@ a{
   position: relative;
   width: 100%;
   display: block;
-  background-color: blue;
+  background-color: white;
   transition: left 1s;
+  overflow: hidden;
 }
 
 .showcase-item{
-display: inline-block;
+  display: inline-block;
   height: inherit;
   width: 400px;
   background-color: white;
@@ -240,6 +276,8 @@ display: inline-block;
   float: left;
   background-position: center;
   background-size: cover;
+  transition: transform 1s;
+  transition: box-shadow 0.2s;
 }
 
 .showcase-item>div:last-child{
@@ -254,6 +292,11 @@ display: inline-block;
   margin-left: 35px;
   margin-right: 35px;
   font-size: 25px;
+}
+
+.showcase-item:hover{
+  transform: scale(1.1);
+  box-shadow: black 0px 0px 40px -10px;
 }
 
 /* body below */

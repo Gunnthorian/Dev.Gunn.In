@@ -30,6 +30,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="navigation-id" class="nav-cont">
     <div class="nav-bar">
+      <div class="name-plate">
+        Gunnar Bjorkman
+      </div>
       <a href="http://gunn.in"><img alignment="middle" src="./images/GB_gold.png" draggable="false"/></a>
       <div class="nav-link-cont">
         <a href="http://gunn.in/support"><div url="/support" class="nav-link nav-starred">Support Me</div></a>
@@ -46,7 +49,11 @@
   </div>
   <div class="showcase-cont">
     <div id="showcase-cont">
-      <div id="showcase-slider" class="showcase-slider">
+      <div id="showcase-slider" class="showcase-slider" onmousemove="showcaseHover()">
+        <div class="showcase-item" style="cursor:pointer;background-image:url('images/desk-illustration-c.gif')"  onclick="window.open('https://github.com/Gunnthorian/homebridge-pwmhat')">
+          <div>iOS Controlled RGB's</div>
+          <div>Control your desklights from your iPhone!</div>
+        </div>
         <div class="showcase-item" style="cursor:pointer;background-image:url('images/led_picker.png')" onclick="window.open('https://github.com/Gunnthorian/LED-Picker')">
           <div>LED Picker</div>
           <div>An app that controls LED lights via an Arduino</div>
@@ -70,7 +77,7 @@
           <h1>About me</h1>
           <p>I enjoy taking things apart and trying to put them back together,
             there's one direct correlation that I have found. The more I take
-            something apart the closer I get to putting it back together.</p>
+            something apart, the closer I'll get to putting it back together.</p>
         </div>
         <div spacer="line"></div>
       </div>

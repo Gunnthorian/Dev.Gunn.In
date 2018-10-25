@@ -4,6 +4,25 @@
         url('../fonts/Rockwell-Regular.woff') format('woff');
 }
 
+@keyframes rainbow {
+0% {color: #ED3636;}
+10% {color: #CC6600;}
+20% {color: #CCCC00;}
+30% {color: #66CC00;}
+40% {color: #00CC00;}
+50% {color: #00CC66;}
+60% {color: #00CCCC;}
+70% {color: #0066CC;}
+80% {color: #0000CC;}
+90% {color: #6600CC;}
+100% {color: #CC0066;}
+}
+
+@keyframes start {
+0% {color: #000000;}
+100% {color: #ED3636;}
+}
+
 a{
   color: #008CFF;
 }
@@ -61,7 +80,7 @@ a{
 .name-plate {
   display: none;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0px;
   left: calc(50% - 250px);
   color: black;
@@ -74,6 +93,23 @@ a{
   margin: 0px auto;
   margin-top: 15px;
   transition: top .1s ease;
+  transition: color 1s ease;
+  /* background: url('../images/text_backsplash.png') no-repeat;
+  background-size: 500px 500px;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+}
+.name-plate:hover{
+/* -webkit-animation:rainbow 5s infinite;
+-ms-animation:rainbow 5s infinite;
+-o-animation:rainbow 5s infinite;
+animation:rainbow 5s infinite 1s;
+animation:start 1s; */
+animation-delay: 0s, 1.5s;
+animation-duration: 1.5s, 2s;
+animation-name: start, rainbow;
+animation-iteration-count: 1, infinite;
 }
 
 @media (min-width: 1200px) {
@@ -106,6 +142,10 @@ a{
   float: right;
   margin-top: 18px;
   margin-right: 8px;
+}
+
+.nav-link-cont>a{
+  float: right;
 }
 
 .nav-scrolled > .nav-bar > a{

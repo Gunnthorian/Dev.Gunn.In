@@ -112,6 +112,7 @@
 
 }
 
+[mobile="0"],[mobile="zero"]       { width: 0%; }
 [mobile="1"],[mobile="one"]       { width: 4.66666666667%; }
 [mobile="2"],[mobile="two"]       { width: 13.3333333333%; }
 [mobile="3"],[mobile="three"]     { width: 22%;            }

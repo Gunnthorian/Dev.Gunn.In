@@ -86,6 +86,30 @@ div.social-icons {
 .fa-github:hover {
     background-color: #24292e;
 }
+.fa-instagram {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #566473;
+}
+.fa-instagram:hover {
+    background-color: #DD2A7B;
+}
+.fa-linkedin-in {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #566473;
+}
+.fa-linkedin-in:hover {
+    background-color: #0E76A8;
+}
 .fa-link {
-  
+
 }

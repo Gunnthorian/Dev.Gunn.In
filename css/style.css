@@ -570,3 +570,46 @@ anchor > div > div > i {
   transition: color 250ms ease-in, text-shadow 250ms ease-in;
   cursor: pointer;
 }
+
+.case-panel{
+  height:400px;
+  position: relative;
+}
+.case-panel > img{
+  position: absolute;
+  width:100%;
+  background-size: contain;
+  background-position: center;
+}
+.case-dropdown{
+  margin: 0px;
+}
+.case-dropdown > select{
+  width: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  border-right: 40px solid #ED3636;
+
+  -webkit-transition: all 50ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 50ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 50ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 50ms ease-in;
+}
+.case-dropdown > select:hover{
+  -webkit-transition: all 50ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 50ms ease-in;
+  -ms-transform: scale(1.05);
+  -moz-transition: all 50ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 50ms ease-in;
+  transform: scale(1.05);
+  cursor: pointer;
+}

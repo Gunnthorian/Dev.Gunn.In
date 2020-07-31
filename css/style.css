@@ -27,6 +27,10 @@ a{
   color: #008CFF;
 }
 
+body{
+  background-color: #24292e;
+}
+
 .nav-cont{
   z-index: 10;
   position: fixed;
@@ -343,6 +347,7 @@ animation-iteration-count: 1, infinite;
 
 .container-background{
   width: 100vw;
+  background-color: white;
 }
 
 .container{

@@ -189,7 +189,7 @@ function showcaseSizing(){
 
 function navAnimation(){
   var nav_bar = document.getElementById('navigation-id');
-  if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) {
+  if (window.pageYOffset > 0 || document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
       nav_bar.className = "nav-cont nav-scrolled";
   }
   else {
